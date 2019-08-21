@@ -1,0 +1,6 @@
+parameters:
+
+database:
+    dsn: '${DB_DRIVER}:host=${DB_HOST};dbname=${DB_DATABASE_NAME}'
+    user: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
