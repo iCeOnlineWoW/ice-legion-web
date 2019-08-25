@@ -5,15 +5,53 @@
     <meta name="viewport" content="width=device-width">
 
     <title>{ifset title}{include title|stripHtml} | {/ifset}iCe Online: Legion</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="{$baseUrl}/css/main.css" rel="stylesheet">
 </head>
 
 <body>
     <div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
 
-    {include content}
+    <div class="container">
+
+        <div class="row">
+            <div class="col col-lg-4">
+                <img id="page-logo" src="{$baseUrl}/img/legion.png" alt="WoW:Legion" title="World of Warcraft: Legion" />
+            </div>
+            <div class="col col-lg-8 header-txt-wrapper">
+                <h1>iCe Online: Legion</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-lg-12 menu-bar">
+                <!-- TODO: generate menu from admin settings/database -->
+                <a n:href="Homepage:" class="menu-btn">HOME</a>
+                <a href="http://forum-dev.ice-wow.eu/" class="menu-btn">FORUM</a>
+                <a n:href="About:" class="menu-btn">ABOUT</a>
+            </div>
+        </div>
+
+        <div class="clr"></div>
+
+        <div class="row container-stripe">
+            <div class="col col-lg-12">
+                {include content}
+            </div>
+        </div>
+
+        <div class="row footer">
+            <div class="col col-lg-12">
+                Copyright &copy; 2018 - {date('Y')}, iCe Online.<br/>
+                Legion is a trademark, and World of Warcraft and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries. This site is in no way associated with Blizzard Entertainment
+            </div>
+        </div>
+    </div>
 
     {block scripts}
     <script src="https://nette.github.io/resources/js/3/netteForms.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     {/block}
 </body>
 </html>

@@ -1,2 +1,121 @@
 
 {block content}
+
+<div class="row">
+    <div class="col col-lg-8 news-wrapper">
+
+        <div class="row banner">
+            <div class="col col-lg-12">
+                <img src="{$baseUrl}/img/banner/banner1.jpg" alt="Banner 1" title="Banner 1" />
+                <div class="banner-text">
+                    <h3>Legion je tu!</h3>
+                    <p>
+                        iCe Online představuje nový projekt: Legion
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TODO: rework to dynamic generating of news items - this one is left here as an example -->
+        <div class="row newsrow">
+            <div class="col col-lg-12 news-title">Nový projekt, nový start</div>
+            <div class="col col-lg-12 news-date">25. 8. 2019, 13:55</div>
+            <div class="col col-lg-12 news-content">
+                <p>
+                    Tým iCe Online Vám s radostí oznamuje nový projekt vznikající pod touto záštitou. Jedná se o vygradování původní formy projektu, ve kterém byl
+                    brán ohled zejména na vzdělávací aspekt celého vývoje a správy projektu. Celý projekt nabývá větších rozměrů a pochopitelně i většího rozsahu, než
+                    projekt původní. Bude zahrnovat mnohem více součástí, které nemusí přímo souviset s hrou World of Warcraft, nebo s herním světem obecně.
+                </p>
+                <p>
+                    Jako bázi pro vývoj jsme se rozhodli zvolit datadisk Legion, který již sice není nejnovější, avšak dává dostatek prostoru pro zdokonalení jak tedy
+                    emulace samotné, tak vývojářů, kteří by se jednotlivým komponentám věnovali.
+                </p>
+                <p>
+                    Rovněž jsme se rozhodli, že bude celý projekt kompletně otevřený ve smyslu zdrojových kódů. Vzdělávací projekt nestaví na základních kamenech konkurenčního prostředí,
+                    a tedy není důvod cokoliv schovávat. Každý může zdrojové kódy číst, stáhnout, zkompilovat.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="col col-lg-4">
+        <h4>SERVER STATUS</h4>
+
+        <div class="row statusbar">
+            <div class="col col-lg-6 hdr">
+                Status
+            </div>
+            <div class="col col-lg-6 value">
+                <!-- TODO: retain actual server status from API -->
+                ONLINE
+            </div>
+            <div class="col col-lg-6 hdr">
+                Players online
+            </div>
+            <div class="col col-lg-6 value">
+                <!-- TODO: retain actual player count from API -->
+                666 (<span class="alliance">332</span> / <span class="horde">334</span>)
+            </div>
+        </div>
+
+        <h4>IN-GAME ACTIVITY</h4>
+
+        <div class="row activitylist-bar">
+            <div class="col col-lg-12">
+
+                <!-- TODO: retrieve actual in-game activity history from API -->
+
+                <div class="activitylist-item">
+                    <div class="activitylist-item-time">17:24</div>
+                    Deathwing killed
+                </div>
+
+                <div class="activitylist-item">
+                    <div class="activitylist-item-time">17:22</div>
+                    Warsong Gulch ended - alliance wins
+                </div>
+
+                <div class="activitylist-item">
+                    <div class="activitylist-item-time">17:10</div>
+                    Gregory reached level 110
+                </div>
+
+            </div>
+        </div>
+
+        <h4>DEVELOPMENT ACTIVITY</h4>
+
+        <div class="row activitylist-bar">
+            <div class="col col-lg-12">
+
+                <!-- TODO: retain actual commit history from GitHub/API transport -->
+
+                <div class="activitylist-item">
+                    <div class="activitylist-item-hdr">
+                        <div class="activitylist-item-time">22. 8.</div>
+                        8e12f401 - G-Core
+                    </div>
+                    Core/Spells: Warlock - fixed Summon Imp
+                </div>
+
+                <div class="activitylist-item">
+                    <div class="activitylist-item-hdr">
+                        <div class="activitylist-item-time">20. 8.</div>
+                        f4b81aac - G-Core
+                    </div>
+                    Core/Movement: fixed confused movement generator
+                </div>
+
+                <div class="activitylist-item">
+                    <div class="activitylist-item-hdr">
+                        <div class="activitylist-item-time">19. 8.</div>
+                        371bc4fe - ice-legion-anveena
+                    </div>
+                    Implemented phinx-based database migrations
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
