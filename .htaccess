@@ -1,1 +1,8 @@
-Require all denied
+RewriteEngine On
+# RewriteBase /
+# prevents files starting with dot to be viewed by browser
+RewriteRule /\.|^\. - [F]
+
+RewriteCond %{HTTP_HOST} ^legion.ice-wow.eu$
+RewriteCond %{REQUEST_FILENAME} !^.well-known
+RewriteRule (.*) /www/$1 [L]
